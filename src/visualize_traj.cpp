@@ -56,22 +56,22 @@ void VisualizeTraj::fcuInputGoalCallback(
   publishNavigatorWaypoints(_next);
   publishAcceptanceRadius(_next);
 
-	_velocity.x = msg.point_1.velocity.x;
-	_velocity.y = msg.point_1.velocity.y;
-	_velocity.z = msg.point_1.velocity.z;
+	// _velocity.x = msg.point_1.velocity.x;
+	// _velocity.y = msg.point_1.velocity.y;
+	// _velocity.z = msg.point_1.velocity.z;
 
-  _position.x = msg.point_1.position.x;
-  _position.y = msg.point_1.position.y;
-  _position.z = msg.point_1.position.z;
+ //  _position.x = msg.point_1.position.x;
+ //  _position.y = msg.point_1.position.y;
+ //  _position.z = msg.point_1.position.z;
   // publishPosition(_position);
 
-  _velocity_sp.x = msg.point_4.velocity.x;
-  _velocity_sp.y = msg.point_4.velocity.y;
-  _velocity_sp.z = msg.point_4.velocity.z;
+  _velocity_sp.x = msg.point_1.velocity.x;
+  _velocity_sp.y = msg.point_1.velocity.y;
+  _velocity_sp.z = msg.point_1.velocity.z;
 
-  _position_sp.x = msg.point_4.position.x;
-  _position_sp.y = msg.point_4.position.y;
-  _position_sp.z = msg.point_4.position.z;
+  _position_sp.x = msg.point_1.position.x;
+  _position_sp.y = msg.point_1.position.y;
+  _position_sp.z = msg.point_1.position.z;
   publishSetpoints(_position_sp, _velocity_sp);
 
   std_msgs::Float32 vel_sp_length;
